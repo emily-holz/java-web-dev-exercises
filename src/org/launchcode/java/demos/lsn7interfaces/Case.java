@@ -1,11 +1,13 @@
 package org.launchcode.java.demos.lsn7interfaces;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Case {
     private ArrayList<Flavor> flavors = new ArrayList<>();
     private ArrayList<Cone> cones = new ArrayList<>();
+    private ArrayList<Topping> toppings = new ArrayList<>();
 
     public Case(){
         Cone cone1 = new Cone("Waffle", 1.25, new ArrayList<>(Arrays.asList( "gluten")));
@@ -27,6 +29,15 @@ public class Case {
         flavors.add(flavor3);
         flavors.add(flavor4);
         flavors.add(flavor5);
+
+        Topping topping1 = new Topping("Rainbow Sprinkles", 0.50, new ArrayList<>(Arrays.asList("red #5")));
+        Topping topping2 = new Topping("Chocolate Sprinkles", 0.50, new ArrayList<>(Arrays.asList("none")));
+        Topping topping3 = new Topping("Peanut Butter Cups", 1.00, new ArrayList<>(Arrays.asList("peanuts")));
+        Topping topping4 = new Topping("Marshmallow Sauce", 1.50, new ArrayList<>(Arrays.asList("none")));
+        toppings.add(topping1);
+        toppings.add(topping2);
+        toppings.add(topping3);
+        toppings.add(topping4);
     }
 
     public ArrayList<Flavor> getFlavors() {
@@ -43,5 +54,13 @@ public class Case {
 
     public void setCones(ArrayList<Cone> cones) {
         this.cones = cones;
+    }
+
+    public ArrayList<Topping> getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(ArrayList<Topping> toppings) {
+        this.toppings = toppings;
     }
 }
